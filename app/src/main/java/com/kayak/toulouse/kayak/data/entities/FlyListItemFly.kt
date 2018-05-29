@@ -1,11 +1,14 @@
 package com.kayak.toulouse.kayak.data.entities
 
+import android.support.annotation.IntegerRes
 import java.util.*
 
 class FlyListItemFly(val originDate: Date,
                           val originCity: String,
                           val destinationDate: Date,
-                          val destinationCity: String)
+                          val destinationCity: String,
+                            val airlineLogo: IntegerRes)
+
 {
     fun getFlyDuration() : Long{
         return destinationDate.time - originDate.time
