@@ -4,6 +4,7 @@ data class FlyListItem(
         val origin: FlyListItemFly,
         val destination: FlyListItemFly,
         val price: Number,
-        val airline: String
+        val airlines: String
 
 )
+

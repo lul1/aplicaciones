@@ -7,7 +7,7 @@ class FlyListItemFly(val originDate: Date,
                           val originCity: String,
                           val destinationDate: Date,
                           val destinationCity: String,
-                            val airlineLogo: IntegerRes)
+                            val airlineLogo: Int)
 
 {
     fun getFlyDuration() : Long{
