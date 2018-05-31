@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imgAirlineOrigin"
+        android:id="@+id/imgAirline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/ic_launcher"
@@ -39,7 +39,7 @@
         tools:layout_editor_absoluteY="143dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textTimeDestination"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:text="TextView"
