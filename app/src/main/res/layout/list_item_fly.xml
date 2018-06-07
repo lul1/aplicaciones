@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,64 +9,101 @@
         android:id="@+id/imgAirline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="90dp" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/textAirlines"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="195dp" />
+        app:layout_constraintEnd_toEndOf="@+id/imgAirline"
+        app:layout_constraintStart_toStartOf="@+id/imgAirline"
+        app:layout_constraintTop_toBottomOf="@+id/imgAirline" />
 
     <TextView
         android:id="@+id/textTimeOrigin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textCityOrigin"
+        app:layout_constraintStart_toStartOf="@+id/textCityOrigin"
+        app:layout_constraintTop_toTopOf="@+id/imgAirline" />
 
     <TextView
         android:id="@+id/textCityOrigin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="63dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="143dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgAirline"
+        app:layout_constraintEnd_toStartOf="@+id/textFlightTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/imgAirline" />
 
     <TextView
         android:id="@+id/textTimeDestination"
         android:layout_width="wrap_content"
-        android:layout_height="21dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="101dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textTimeOrigin"
+        app:layout_constraintEnd_toEndOf="@+id/textCityDestination"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="@+id/textCityDestination"
+        app:layout_constraintTop_toTopOf="@+id/textTimeOrigin" />
 
     <TextView
         android:id="@+id/textPrice"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="195dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textAirlines"
+        app:layout_constraintEnd_toEndOf="@+id/textCityDestination"
+        app:layout_constraintStart_toStartOf="@+id/textCityDestination"
+        app:layout_constraintTop_toTopOf="@+id/textAirlines" />
 
     <TextView
         android:id="@+id/textFlightTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="200dp"
-        tools:layout_editor_absoluteY="143dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textCityOrigin"
+        app:layout_constraintEnd_toStartOf="@+id/textCityDestination"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textCityOrigin"
+        app:layout_constraintTop_toTopOf="@+id/textCityOrigin"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textCityDestination"
-        android:layout_width="64dp"
+        android:layout_width="58dp"
         android:layout_height="18dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="143dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textFlightTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textFlightTime"
+        app:layout_constraintTop_toTopOf="@+id/textFlightTime"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
