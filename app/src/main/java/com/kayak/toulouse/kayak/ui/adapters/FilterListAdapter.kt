@@ -12,6 +12,7 @@ import android.widget.TextView
 import com.kayak.toulouse.kayak.R
 import com.kayak.toulouse.kayak.data.entities.FilterListItem
 import com.kayak.toulouse.kayak.data.entities.FlyListItem
+import kotlinx.android.synthetic.main.list_item_filter.view.*
 import kotlinx.android.synthetic.main.list_item_fly.view.*
 
 class FilterListAdapter (
@@ -23,7 +24,7 @@ class FilterListAdapter (
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item_filter,null,false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item_filter, null, false))
     }
 
     override fun getItemCount(): Int {
@@ -31,8 +32,8 @@ class FilterListAdapter (
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val filterListItem : FilterListItem=items.get(position)
-        holder.textFilter.text=filterListItem.text
+        val filterListItem: FilterListItem = items.get(position)
+        holder.textFilter.text = filterListItem.text
 
     }
 
@@ -41,3 +42,4 @@ class FilterListAdapter (
 
     }
 
+}

@@ -9,7 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField "String","SERVER_URL",'"https://demo0567703.mockable.io/"'
+        buildConfigField "String","SERVER_URL",'"https://demo3726864.mockable.io/"'
 
     }
     buildTypes {

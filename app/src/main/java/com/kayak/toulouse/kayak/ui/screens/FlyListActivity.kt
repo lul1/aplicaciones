@@ -9,6 +9,7 @@ import com.kayak.toulouse.kayak.R
 import com.kayak.toulouse.kayak.data.api.KayakRetrofit
 import com.kayak.toulouse.kayak.data.entities.FlyListItem
 import com.kayak.toulouse.kayak.data.entities.FlyListItemFly
+import com.kayak.toulouse.kayak.data.entities.ResponseListFlyItem
 import com.kayak.toulouse.kayak.ui.adapters.FlyListAdapter
 import kotlinx.android.synthetic.main.activity_fly_list.*
 import okhttp3.OkHttpClient
@@ -36,17 +37,26 @@ class FlyListActivity : AppCompatActivity() {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         val kayakService = retrofit.create(KayakRetrofit::class.java)
-        val callable: Call<FlyListItem> =kayakService.getFly()
-        callable.enqueue(object : Callback<FlyListItem>{
-            override fun onFailure(call: Call<FlyListItem>?, t: Throwable?) {
+        val callable: Call<ResponseListFlyItem> =kayakService.getFly()
+        callable.enqueue(object : Callback<ResponseListFlyItem>{
+            override fun onFailure(call: Call<ResponseListFlyItem>?, t: Throwable?) {
+
                 Toast.makeText(
-                        this@FlyListActivity, "Error llamando al api", Toast.LENGTH_SHORT)
+                        this@FlyListActivity, t?.message, Toast.LENGTH_SHORT)
                         .show()
             }
-            override fun onResponse (call: Call<FlyListItem>?, response: Response<FlyListItem>){
+
+            override fun onResponse (call: Call<ResponseListFlyItem>?, response: Response<ResponseListFlyItem>){
                 val items : ArrayList<FlyListItem> = ArrayList()
+                android.util.Log.i("here", "yes")
 
                 android.util.Log.i("Response Contents", response?.body().toString())
+                response?.body()?.results?.iterator()?.forEach {
+                    val item = FlyListItemFly(
+                            Date.parse("2015-12-12"),"Origin",
+                            Date,parse("2015-12-12")
+                }
+                rcvFlyList.layoutManager = LinearLayoutManager(this@FlyListActivity)
 
                 rcvFlyList.adapter = FlyListAdapter(items, this@FlyListActivity)
 

@@ -29,7 +29,7 @@ class FlyListAdapter (
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val flyListItem : FlyListItem=items.get(position)
-        holder.imgAirline.setImageDrawable(context.getDrawable(flyListItem.origin.airlineLogo))
+        //holder.imgAirline.setImageDrawable(context.getDrawable(flyListItem.origin.airlineLogo))
         holder.textAirlines.text=flyListItem.airlines
         holder.textCityDestination.text=flyListItem.origin.destinationCity
         holder.textCityOrigin.text=flyListItem.origin.originCity
@@ -37,8 +37,6 @@ class FlyListAdapter (
         holder.textPrice.text=flyListItem.price.toDouble().toString()
         holder.textTimeDestination.text=flyListItem.origin.originDate.toString()
         holder.textTimeOrigin.text=flyListItem.origin.destinationDate.toString()
-
-
 
 
     }
